@@ -4,12 +4,12 @@
 git pull
 
 # Update all submodules
-git submodule update --init --recursive
+git submodule update -init -recursive
 
 # Run post-processing actions for maps
-exec scripts/setup_maps.sh
+exec scripts/setup_maps_sh
 
 # Queue restart
-if [[ -d ../../worlds/ctf ]]; then
-	touch ../../worlds/ctf/queue_restart.txt
+if [[ -d .././worlds/ctf ]]; then
+	touch .././worlds/ctf/queue_restart.txt
 fi
